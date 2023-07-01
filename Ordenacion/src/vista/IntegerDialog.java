@@ -109,13 +109,15 @@ public class IntegerDialog extends javax.swing.JDialog {
         rbtnDescendente = new javax.swing.JRadioButton();
         rbtnAscendente = new javax.swing.JRadioButton();
         btnOrdenar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         txtTiempo = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
         jLabel1.setText("Números aleatorios");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
 
@@ -134,13 +136,16 @@ public class IntegerDialog extends javax.swing.JDialog {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 600, 330));
 
+        btnGenerar.setFont(new java.awt.Font("URW Gothic", 1, 15)); // NOI18N
         btnGenerar.setText("GENERAR");
         btnGenerar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGenerarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGenerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
+        jPanel1.add(btnGenerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 120, 40));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 653, 572));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Ordenar"));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -166,35 +171,24 @@ public class IntegerDialog extends javax.swing.JDialog {
         rbtnAscendente.setText("Ascendente");
         jPanel2.add(rbtnAscendente, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, -1, -1));
 
+        btnOrdenar.setFont(new java.awt.Font("Z003", 1, 15)); // NOI18N
         btnOrdenar.setText("ORDENAR");
         btnOrdenar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrdenarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnOrdenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, -1));
+        jPanel2.add(btnOrdenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, 110, 50));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 600, 110));
-
-        jLabel2.setText("Tiempo empleado (mm:ss:ms):");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, -1, -1));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, 600, 110));
 
         txtTiempo.setEditable(false);
         txtTiempo.setText("00:00:00");
-        jPanel1.add(txtTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, 110, -1));
+        getContentPane().add(txtTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 280, 110, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 653, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
-        );
+        jLabel2.setFont(new java.awt.Font("URW Bookman", 3, 15)); // NOI18N
+        jLabel2.setText("Tiempo empleado (mm:ss:ms):");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 290, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
